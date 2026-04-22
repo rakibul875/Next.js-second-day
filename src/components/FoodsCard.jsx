@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -5,8 +6,10 @@ const FoodsCard = ({ food }) => {
  
   return (
     <div>
-      <div className="card bg-base-100 shadow-sm">
-        <figure></figure>
+      <div className="card bg-base-100 shadow-sm h-full">
+        <figure className="mt-5">
+            <Image src={food.image_link} alt={food.dish_name} width={200} height={300} />
+        </figure>
         <div className="card-body">
           <h2 className="card-title">{food.dish_name}</h2>
           <div className="mt-5 space-y-5">
